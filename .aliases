@@ -1,0 +1,78 @@
+os='debian'
+
+case $os in
+    debian)
+        alias update='sudo apt-get update'
+        alias search='apt-cache search'
+        alias install='sudo apt-get install -y'
+        alias remove='sudo apt-get remove'
+        alias upgrade='sudo apt-get upgrade -y'
+		alias autoremove='sudo apt-get autoremove'
+		#alias purge-config='sudo dpkg --purge $(dpkg --get-selections | grep deinstall | cut -f1 )'
+    ;;
+
+    fedora)
+        alias update='sudo dnf update'
+        alias search='dnf search'
+        alias install='sudo dnf install -y'
+        alias remove='sudo dnf remove'
+    ;;
+esac
+
+
+# Operations
+alias ..='cd ..'
+alias ...='.. && ..'
+
+# shortcuts to lab folders
+alias cdv='cd ~/docs/acme/1stvol'
+alias cdvv='cd ~/docs/acme/2ndvol'
+
+# Make a shortcut to acme homework latex 
+alias cdhv='cd ~/docs/acme/hw/v1'
+alias cdhvv='cd ~/docs/acme/hw/v2'
+
+alias cp='cp -vrf'
+alias mv='mv -ivf'
+alias rm='rm -iv'
+alias link='ln -s -r'
+alias ls='ls --color=always'
+alias lsa='ls -lp | column -t'
+alias ll='ls -lah'
+alias :q='exit'
+
+# Programs
+alias load='htop -u jonathan'
+alias df='dfc -f -s'
+alias time='tty-clock -cb -C 6'
+alias uptime='uptime -p'
+alias get='axel -n 4'
+alias extract='dtrx -v'
+alias m='mpv'
+alias net='bwm-ng -t 1000'
+ 
+ ##################################
+# Personal Programs
+alias b='~/.dotfiles/adj_brightness'
+
+# Super User Tasks
+alias poweroff='sudo poweroff'
+alias reboot='sudo reboot'
+alias kill='killall -v --ignore-case'
+alias full_access='sudo chmod -R a+rw ./'
+
+# n = delay second
+# d = difference
+alias watch='watch -ct -n 1 -d'
+
+# Git
+alias push='git push origin master'
+alias pull='git pull origin master'
+
+# programming
+alias python='~/anaconda3/bin/python3.7'
+alias ipython='~/anaconda3/bin/ipython3'
+
+# gaming
+alias freeciv='/usr/games/freeciv-gtk3'
+
